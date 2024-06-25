@@ -174,15 +174,6 @@ th, td {
 }
 
 @media (max-width: 600px) {
-  input[type="text"],
-  input[type="number"],
-  select {
-      width: calc(100% - 20px);
-  }
-
-  .input-container button {
-      width: 100%;
-  }
 
   #chartModal {
       width: 90%;
