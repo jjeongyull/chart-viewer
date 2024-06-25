@@ -1,0 +1,190 @@
+/* style.css */
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.main-body {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3498db; /* 파스텔톤 하늘색 */
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.input-container {
+  margin-bottom: 30px;
+}
+.label-count-div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.label-count-div button{
+  flex-shrink: 0;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #3498db; /* 파스텔톤 하늘색 */
+  font-size: 18px;
+}
+
+input[type="text"],
+input[type="number"],
+.input-container select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db; /* 파스텔톤 하늘색 */
+}
+
+select {
+  width: 100%;
+}
+
+ button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #3498db; /* 파스텔톤 하늘색 */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* 진한 파스텔톤 하늘색 */
+}
+
+#inputSection {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+table button{
+  width: 100%;
+}
+
+th {
+  background-color: #3498db; /* 파스텔톤 하늘색 */
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* 테이블 스타일 */
+table {
+  width: auto; /* 내용에 맞게 동적으로 조정 */
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto; /* 가로 스크롤 */
+  display: block; /* display를 block으로 설정하여 가로 스크롤이 나타나도록 함 */
+  white-space: nowrap; /* 텍스트가 줄바꿈 되지 않도록 함 */
+}
+
+
+th, td {
+  padding: 10px;
+  min-width: 150px; /* 최소 너비 설정 */
+  max-width: 250px; /* 최대 너비 설정 */
+  overflow: hidden; /* 내용이 너무 길 경우 숨김 처리 */
+  text-overflow: ellipsis; /* 너무 긴 텍스트는 ...으로 처리 */
+}
+
+#chartModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  max-width: 1100px;
+}
+
+#chartModal canvas {
+  width: 100%;
+  height: auto; /* Responsive height */
+  max-height: 600px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.submit-btn{
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  input[type="text"],
+  input[type="number"],
+  select {
+      width: calc(100% - 20px);
+  }
+
+  .input-container button {
+      width: 100%;
+  }
+
+  #chartModal {
+      width: 90%;
+  }
+}

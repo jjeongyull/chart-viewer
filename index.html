@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>차트 뷰어 프로그램</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-body">
+    <h1>통계차트 프로그램</h1>
+    <div>
+      <div class="input-container">
+          <label for="chartTitle">차트 제목</label>
+          <input type="text" id="chartTitle" placeholder="차트 제목을 입력하세요.">
+      </div>
+      <div class="input-container">
+          <label for="chartType">차트 형태</label>
+          <select id="chartType">
+              <option value="bar">Bar</option>
+              <option value="line">Line</option>
+              <option value="pie">Pie</option>
+              <option value="doughnut">Doughnut</option>
+              <option value="radar">Radar</option>
+          </select>
+      </div>
+      <div class="input-container">
+          <label for="dataPerLabel">라벨별 데이터 갯수</label>
+          <div class="label-count-div">
+            <input type="number" id="dataPerLabel" placeholder="데이터 갯수를 입력하세요.">
+            <button onclick="createInitialInput()">차트 데이터 입력하기</button>
+          </div>
+      </div>
+    </div>
+    <div id="inputSection">
+      <!-- 데이터 입력창이 여기에 동적으로 생성됩니다. -->
+    </div>
+    <button class="submit-btn" onclick="showChart()">Show Chart</button>
+  </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div id="chartModal">
+        <canvas id="myChart"></canvas>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="chart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
