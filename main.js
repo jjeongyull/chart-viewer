@@ -83,6 +83,20 @@ function addTableRow(table) {
     inputCounter++;
 }
 
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgba(${r}, ${g}, ${b}, 0.2)`;
+}
+
+function getRandomBorderColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgba(${r}, ${g}, ${b}, 1)`;
+}
+
 function showChart() {
     const chartTitle = document.getElementById('chartTitle').value;
     const chartType = document.getElementById('chartType').value;
@@ -130,8 +144,8 @@ function showChart() {
         datasets.push({
             label: label,
             data: values,
-            backgroundColor: `rgba(${75 + datasets.length * 30}, 192, 192, 0.2)`,
-            borderColor: `rgba(${75 + datasets.length * 30}, 192, 192, 1)`,
+            backgroundColor: getRandomColor(),
+            borderColor: getRandomBorderColor(),
             borderWidth: 1
         });
     }
